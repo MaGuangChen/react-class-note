@@ -10,7 +10,8 @@ export default class Main extends Component {
       constructor(props) {
           super(props);//es6繼承
       }
-      render(){          
+      render(){  
+                
           return(
               <div>
                 <MainHeader />

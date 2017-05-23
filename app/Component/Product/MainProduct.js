@@ -1,7 +1,8 @@
 import React , {Component} from 'react';
 import propTypes from 'prop-types';
-import ProductPhoto from './ProductLeft/ProductPhoto';
 
+import ProductMainLeft from './ProductLeft/ProductMainLeft';
+import ProductMainRight from './ProductRight/ProductMainRight'
 export default class MainProduct extends Component {
     constructor(props){
         super(props);
@@ -11,7 +12,12 @@ export default class MainProduct extends Component {
     render(){
         return (
            <div>
-            <ProductPhoto />
+            <ProductMainLeft 
+            background="https://www.settour.com.tw/ss_img/GFG/0000/0028/67/GFG0000002867_s_300.jpg"
+            title="預設標題喔"
+            />
+            <ProductMainRight/>
+
            </div>
         );
     }
