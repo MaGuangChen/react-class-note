@@ -8075,7 +8075,22 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(_Main2.default, null), document.getElementById('root'));
+	_reactDom2.default.render(_react2.default.createElement(_Main2.default, { Mes: 'Hello' }), document.getElementById('root'));
+	/*
+	ReactDOM.render(
+	  <Router history={hashHistory}>
+	    
+	    <Route path="/" component={Main}>
+	       <Route path="about" component={About}/>
+	       <Route path="Examples" component={Examples}/>
+	       <IndexRoute component={Weather}/>
+	    </Route>
+
+	  </Router>,
+	  document.getElementById('app')
+	);
+
+	*/
 
 /***/ }),
 /* 298 */
@@ -29848,7 +29863,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	   value: true
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -29861,9 +29876,17 @@
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
-	var _RequiredInputText = __webpack_require__(482);
+	var _MainHeader = __webpack_require__(482);
 
-	var _RequiredInputText2 = _interopRequireDefault(_RequiredInputText);
+	var _MainHeader2 = _interopRequireDefault(_MainHeader);
+
+	var _MainNav = __webpack_require__(483);
+
+	var _MainNav2 = _interopRequireDefault(_MainNav);
+
+	var _MainProduct = __webpack_require__(484);
+
+	var _MainProduct2 = _interopRequireDefault(_MainProduct);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29872,28 +29895,38 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//要印得component
+
 
 	var Main = function (_Component) {
-	   _inherits(Main, _Component);
+	    _inherits(Main, _Component);
 
-	   function Main(props) {
-	      _classCallCheck(this, Main);
+	    function Main(props) {
+	        _classCallCheck(this, Main);
 
-	      return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
-	   }
+	        return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props)); //es6繼承
+	    }
 
-	   _createClass(Main, [{
-	      key: 'render',
-	      value: function render() {
-	         return _react2.default.createElement(
-	            'div',
-	            null,
-	            _react2.default.createElement(_RequiredInputText2.default, null)
-	         );
-	      }
-	   }]);
+	    _createClass(Main, [{
+	        key: 'render',
+	        value: function render() {
 
-	   return Main;
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_MainHeader2.default, null),
+	                _react2.default.createElement(_MainNav2.default, null),
+	                _react2.default.createElement(_MainProduct2.default, null),
+	                _react2.default.createElement(
+	                    'h1',
+	                    null,
+	                    'Main Component\u8A66\u5370'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Main;
 	}(_react.Component);
 
 	exports.default = Main;
@@ -30016,6 +30049,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _propTypes = __webpack_require__(480);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30024,41 +30061,16 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var RequiredInputText = function (_Component) {
-	    _inherits(RequiredInputText, _Component);
+	var MainHeader = function (_Component) {
+	    _inherits(MainHeader, _Component);
 
-	    function RequiredInputText(props) {
-	        _classCallCheck(this, RequiredInputText);
+	    function MainHeader(props) {
+	        _classCallCheck(this, MainHeader);
 
-	        //繼承所有props
-	        var _this = _possibleConstructorReturn(this, (RequiredInputText.__proto__ || Object.getPrototypeOf(RequiredInputText)).call(this, props));
-
-	        _this.state = {
-	            UserName: '',
-	            UserInput: '' };
-
-	        return _this;
+	        return _possibleConstructorReturn(this, (MainHeader.__proto__ || Object.getPrototypeOf(MainHeader)).call(this, props)); //繼承所有props
 	    }
 
-	    _createClass(RequiredInputText, [{
-	        key: 'handleUserName',
-	        value: function handleUserName(e) {
-	            this.setState({
-	                UserName: e.target.value
-	            });
-	        }
-	        //讓user同步輸入名字改變結束
-
-	    }, {
-	        key: 'handleUserInput',
-	        value: function handleUserInput(e) {
-	            this.setState({
-	                UserInput: e.target.value
-	            });
-	        }
-	        //讓user同步輸入留言改變結束
-
-	    }, {
+	    _createClass(MainHeader, [{
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -30067,39 +30079,1326 @@
 	                _react2.default.createElement(
 	                    'h1',
 	                    null,
-	                    '\u59D3\u540D'
-	                ),
-	                _react2.default.createElement('input', { type: 'text', value: this.state.UserName,
-	                    placeholder: '\u8F38\u5165\u59D3\u540D',
-	                    onChange: this.handleUserName }),
-	                _react2.default.createElement(
-	                    'h1',
-	                    null,
-	                    '\u7559\u8A00'
-	                ),
-	                _react2.default.createElement('input', { type: 'text',
-	                    value: this.state.UserInput, placeholde: '\u8F38\u5165\u60A8\u7684\u7559\u8A00',
-	                    onChange: this.handleUserInput }),
-	                _react2.default.createElement(
-	                    'h1',
-	                    null,
-	                    this.state.UserName
-	                ),
-	                _react2.default.createElement(
-	                    'h1',
-	                    null,
-	                    this.state.UserInput
+	                    'MainHeader Component \u8A66\u5370'
 	                )
 	            );
 	        }
-	        //render function 結束
-
 	    }]);
 
-	    return RequiredInputText;
+	    return MainHeader;
 	}(_react.Component);
 
-	exports.default = RequiredInputText;
+	exports.default = MainHeader;
+
+/***/ }),
+/* 483 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(480);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var MainNav = function (_Component) {
+	    _inherits(MainNav, _Component);
+
+	    function MainNav(props) {
+	        _classCallCheck(this, MainNav);
+
+	        return _possibleConstructorReturn(this, (MainNav.__proto__ || Object.getPrototypeOf(MainNav)).call(this, props));
+	    }
+
+	    _createClass(MainNav, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'ul',
+	                    null,
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            '\u9996\u9801'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            '\u570B\u5916\u5718\u9AD4\u65C5\u904A'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            '\u570B\u5916\u81EA\u7531\u884C'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            '\u570B\u969B\u6A5F\u7968'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            '\u570B\u5916\u8A02\u623F'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            '\u570B\u5167\u65C5\u904A'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            '\u570B\u5167\u8A02\u623F'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            '\u65C5\u904A\u7968\u5238'
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return MainNav;
+	}(_react.Component);
+
+	exports.default = MainNav;
+
+/***/ }),
+/* 484 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(480);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	var _ProductMainLeft = __webpack_require__(485);
+
+	var _ProductMainLeft2 = _interopRequireDefault(_ProductMainLeft);
+
+	var _ProductMainRight = __webpack_require__(489);
+
+	var _ProductMainRight2 = _interopRequireDefault(_ProductMainRight);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var MainProduct = function (_Component) {
+	    _inherits(MainProduct, _Component);
+
+	    function MainProduct(props) {
+	        _classCallCheck(this, MainProduct);
+
+	        return _possibleConstructorReturn(this, (MainProduct.__proto__ || Object.getPrototypeOf(MainProduct)).call(this, props));
+	    }
+
+	    _createClass(MainProduct, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_ProductMainLeft2.default, {
+	                    background: 'https://www.settour.com.tw/ss_img/GFG/0000/0028/67/GFG0000002867_s_300.jpg',
+	                    title: '\u9810\u8A2D\u6A19\u984C\u5594'
+	                }),
+	                _react2.default.createElement(_ProductMainRight2.default, null)
+	            );
+	        }
+	    }]);
+
+	    return MainProduct;
+	}(_react.Component);
+
+	exports.default = MainProduct;
+
+/***/ }),
+/* 485 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ProductDisplay = __webpack_require__(486);
+
+	var _ProductDisplay2 = _interopRequireDefault(_ProductDisplay);
+
+	var _SlideNext = __webpack_require__(487);
+
+	var _SlideNext2 = _interopRequireDefault(_SlideNext);
+
+	var _SlidePrev = __webpack_require__(488);
+
+	var _SlidePrev2 = _interopRequireDefault(_SlidePrev);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ProductMainLeft = function (_Component) {
+	    _inherits(ProductMainLeft, _Component);
+
+	    function ProductMainLeft(props) {
+	        _classCallCheck(this, ProductMainLeft);
+
+	        //讓初始state等於props
+	        var _this = _possibleConstructorReturn(this, (ProductMainLeft.__proto__ || Object.getPrototypeOf(ProductMainLeft)).call(this, props));
+
+	        _this.state = {
+	            background: _this.props.background,
+	            title: _this.props.title,
+	            dataCount: -1
+	        };
+	        _this.handleContainer = _this.handleContainer.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(ProductMainLeft, [{
+	        key: 'handleContainer',
+	        value: function handleContainer(updates) {
+	            this.setState(updates);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var img = this.state.background;
+	            var title = this.state.title;
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_ProductDisplay2.default, { background: img, title: title }),
+	                _react2.default.createElement(_SlideNext2.default, { changeContainer: this.handleContainer, dataCount: this.state.dataCount }),
+	                _react2.default.createElement(_SlidePrev2.default, { changeContainer: this.handleContainer, dataCount: this.state.dataCount })
+	            );
+	        }
+	    }]);
+
+	    return ProductMainLeft;
+	}(_react.Component);
+
+	exports.default = ProductMainLeft;
+
+/***/ }),
+/* 486 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ProductDisplay = function (_Component) {
+	    _inherits(ProductDisplay, _Component);
+
+	    function ProductDisplay(props) {
+	        _classCallCheck(this, ProductDisplay);
+
+	        return _possibleConstructorReturn(this, (ProductDisplay.__proto__ || Object.getPrototypeOf(ProductDisplay)).call(this, props));
+	    }
+
+	    _createClass(ProductDisplay, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('img', { src: this.props.background }),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    this.props.title
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    '\u65E9\u9CE5\u512A\u60E0\uFF1A\u51FA\u767C\u524D90\u5929\u8A02\u8CFC.\u7B2C\u4E8C\u4EBA\u770110,000 \u67E5\u770B\u8AAA\u660E \u65E9\u9CE5\u512A\u60E0\uFF1A\u51FA\u767C\u524D60\u5929\u8A02\u8CFC.\u7B2C\u4E8C\u4EBA\u77017,000 \u67E5\u770B\u8AAA\u660E \u65E9\u9CE5\u512A\u60E0\uFF1A\u51FA\u767C\u524D45\u5929\u8A02\u8CFC.\u7B2C\u4E8C\u4EBA\u77015,000 \u67E5\u770B\u8AAA\u660E'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return ProductDisplay;
+	}(_react.Component);
+
+	exports.default = ProductDisplay;
+
+/***/ }),
+/* 487 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _SlidePrev = __webpack_require__(488);
+
+	var _SlidePrev2 = _interopRequireDefault(_SlidePrev);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var data = {
+	    background: ["https://cdn.dribbble.com/users/1008875/screenshots/3514346/city.png", "https://cdn.dribbble.com/users/106132/screenshots/3515541/drax_dribbble.jpg", "https://cdn.dribbble.com/users/26971/screenshots/3515739/tape.jpg", "https://cdn.dribbble.com/users/973/screenshots/3515713/gather-desk-3.png"],
+	    title: ["買就送日本行動上網分享器二日免費券", "★★新婚蜜月貴賓專屬優惠，祝您甜甜蜜蜜、恩愛一生★★", "小孩不佔床依大人價 扣一萬 (每房限兩大一小不佔 才可折扣)", "寵愛媽咪~感恩五月~好禮雙重送"]
+
+	};
+
+	var SlideNext = function (_Component) {
+	    _inherits(SlideNext, _Component);
+
+	    function SlideNext(props) {
+	        _classCallCheck(this, SlideNext);
+
+	        var _this = _possibleConstructorReturn(this, (SlideNext.__proto__ || Object.getPrototypeOf(SlideNext)).call(this, props));
+
+	        _this.onNext = _this.onNext.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(SlideNext, [{
+	        key: 'onNext',
+	        value: function onNext(e) {
+	            e.preventDefault();
+	            var i = this.props.dataCount; //從0開始加上去
+	            var updates = {}; //儲存更新state的結果
+	            if (i < 3) {
+	                var x = i + 1;
+	                console.log("slideNext目前props.dataCount 值" + i);
+	                console.log("slideNext內容陣列數字" + x);
+	                updates.background = data.background[x];
+	                updates.title = data.title[x];
+	                updates.dataCount = x;
+	                this.props.changeContainer(updates);
+	            }
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'button',
+	                    { onClick: this.onNext },
+	                    'next one'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return SlideNext;
+	}(_react.Component);
+
+	exports.default = SlideNext;
+
+/***/ }),
+/* 488 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var data = {
+	    background: ["https://cdn.dribbble.com/users/1008875/screenshots/3514346/city.png", "https://cdn.dribbble.com/users/106132/screenshots/3515541/drax_dribbble.jpg", "https://cdn.dribbble.com/users/26971/screenshots/3515739/tape.jpg", "https://cdn.dribbble.com/users/973/screenshots/3515713/gather-desk-3.png"],
+	    title: ["買就送日本行動上網分享器二日免費券", "★★新婚蜜月貴賓專屬優惠，祝您甜甜蜜蜜、恩愛一生★★", "小孩不佔床依大人價 扣一萬 (每房限兩大一小不佔 才可折扣)", "寵愛媽咪~感恩五月~好禮雙重送"]
+	};
+
+	var SlidePrev = function (_Component) {
+	    _inherits(SlidePrev, _Component);
+
+	    function SlidePrev(props) {
+	        _classCallCheck(this, SlidePrev);
+
+	        var _this = _possibleConstructorReturn(this, (SlidePrev.__proto__ || Object.getPrototypeOf(SlidePrev)).call(this, props));
+
+	        _this.onPrev = _this.onPrev.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(SlidePrev, [{
+	        key: "onPrev",
+	        value: function onPrev(e) {
+	            e.preventDefault();
+	            var i = this.props.dataCount; //從0開始加上去
+	            var updates = {}; //儲存更新state的結果
+	            if (i < 4 && i > 0) {
+	                var x = i - 1;
+	                console.log("slidePrev目前props.dataCount 值" + i);
+	                console.log("slidePrev內容陣列數字" + x);
+	                updates.background = data.background[x];
+	                updates.title = data.title[x];
+	                updates.dataCount = x;
+	                this.props.changeContainer(updates);
+	            }
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(
+	                    "button",
+	                    { onClick: this.onPrev },
+	                    "previous one"
+	                )
+	            );
+	        }
+	    }]);
+
+	    return SlidePrev;
+	}(_react.Component);
+
+	exports.default = SlidePrev;
+
+/***/ }),
+/* 489 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(480);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	var _MainFilter = __webpack_require__(490);
+
+	var _MainFilter2 = _interopRequireDefault(_MainFilter);
+
+	var _ProductMainRightDisplay = __webpack_require__(491);
+
+	var _ProductMainRightDisplay2 = _interopRequireDefault(_ProductMainRightDisplay);
+
+	var _SelectTest = __webpack_require__(492);
+
+	var _SelectTest2 = _interopRequireDefault(_SelectTest);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ProductMainRight = function (_Component) {
+	    _inherits(ProductMainRight, _Component);
+
+	    function ProductMainRight(props) {
+	        _classCallCheck(this, ProductMainRight);
+
+	        var _this = _possibleConstructorReturn(this, (ProductMainRight.__proto__ || Object.getPrototypeOf(ProductMainRight)).call(this, props));
+
+	        _this.state = {
+
+	            date: 24,
+	            situation: "哈利波特入圍",
+	            DiscountedPrice: true,
+	            //要render的
+	            reciveObject: [{
+	                ticketsType: "19歲以上 成人票",
+	                Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	                Price: 560,
+	                TotalAmount: 4,
+	                UserSelectAmount: 0,
+	                date: 524,
+	                situation: "哈利波特入圍",
+	                DiscountedPrice: true
+	            }, {
+	                ticketsType: "13-18歲 中學生票",
+	                Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	                Price: 480,
+	                TotalAmount: 2,
+	                UserSelectAmount: 0,
+	                date: 524,
+	                situation: "哈利波特入圍",
+	                DiscountedPrice: false
+	            }, {
+	                ticketsType: "7-12歲 小學生票",
+	                Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	                Price: 330,
+	                TotalAmount: 2,
+	                UserSelectAmount: 0,
+	                date: 524,
+	                situation: "哈利波特入圍",
+	                DiscountedPrice: true
+	            }, {
+	                ticketsType: "4-6歲 幼兒票",
+	                Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	                Price: 200,
+	                TotalAmount: 1,
+	                UserSelectAmount: 0,
+	                date: 524,
+	                situation: "哈利波特入圍",
+	                DiscountedPrice: false
+	            }]
+	        };
+	        _this.handleFilter = _this.handleFilter.bind(_this);
+	        return _this;
+	    }
+	    //用來更新state
+
+
+	    _createClass(ProductMainRight, [{
+	        key: 'handleFilter',
+	        value: function handleFilter(updates) {
+	            this.setState(updates);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            //測試中
+	            console.log(this.state.situation);
+
+	            //試驗轉化object到jsx
+	            var a = this.state.reciveObject;
+
+	            var nineteenUp = [];
+	            var thirteenUp = [];
+	            var sevenUp = [];
+	            var fourUp = [];
+	            for (var i = 0; i < a.length; i++) {
+	                if (a[i].ticketsType === "19歲以上 成人票") {
+
+	                    nineteenUp.push(a[i].ticketsType, "｜", a[i].Price, "｜", a[i].TotalAmount);
+	                } else if (a[i].ticketsType === "13-18歲 中學生票") {
+	                    thirteenUp.push(a[i].ticketsType, "｜", a[i].Price, "｜", a[i].TotalAmount);
+	                } else if (a[i].ticketsType === "7-12歲 小學生票") {
+	                    sevenUp.push(a[i].ticketsType, "｜", a[i].Price, "｜", a[i].TotalAmount);
+	                } else if (a[i].ticketsType === "4-6歲 幼兒票") {
+	                    fourUp.push(a[i].ticketsType, "｜", a[i].Price, "｜", a[i].TotalAmount);
+	                }
+	            }
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_MainFilter2.default, { onSelect: this.handleFilter }),
+	                _react2.default.createElement(_ProductMainRightDisplay2.default, { nineteenUp: nineteenUp, thirteenUp: thirteenUp, sevenUp: sevenUp, fourUp: fourUp }),
+	                _react2.default.createElement(_SelectTest2.default, null)
+	            );
+	        }
+	    }]);
+
+	    return ProductMainRight;
+	}(_react.Component);
+	//onSelect={this.handleFilter}
+
+
+	exports.default = ProductMainRight;
+
+/***/ }),
+/* 490 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(480);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var productItems = [
+	//以下開始為524的門票
+	//524哈利播特
+	{ ticketsType: "19歲以上 成人票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 560,
+	    TotalAmount: 4,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "13-18歲 中學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 480,
+	    TotalAmount: 2,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "7-12歲 小學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 330,
+	    TotalAmount: 2,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "4-6歲 幼兒票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 200,
+	    TotalAmount: 1,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: false
+	},
+	//524星際大戰入圍
+	{ ticketsType: "19歲以上 成人票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 700,
+	    TotalAmount: 1,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "13-18歲 中學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 630,
+	    TotalAmount: 1,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "7-12歲 小學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 550,
+	    TotalAmount: 2,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "4-6歲 幼兒票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 220,
+	    TotalAmount: 2,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: true
+	},
+	//524魔戒入圍
+	{ ticketsType: "19歲以上 成人票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 570,
+	    TotalAmount: 15,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "13-18歲 中學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 450,
+	    TotalAmount: 3,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "7-12歲 小學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 380,
+	    TotalAmount: 10,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "4-6歲 幼兒票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 170,
+	    TotalAmount: 7,
+	    UserSelectAmount: 0,
+	    date: 524,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: false
+	},
+
+	//以下為525門票
+	//525哈利波特
+	{ ticketsType: "19歲以上 成人票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 670,
+	    TotalAmount: 4,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "13-18歲 中學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 500,
+	    TotalAmount: 2,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "7-12歲 小學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 340,
+	    TotalAmount: 4,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "4-6歲 幼兒票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 200,
+	    TotalAmount: 4,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: true
+	},
+	//525星際大戰入圍
+	{ ticketsType: "19歲以上 成人票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 700,
+	    TotalAmount: 10,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "13-18歲 中學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 630,
+	    TotalAmount: 1,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "7-12歲 小學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 470,
+	    TotalAmount: 8,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "4-6歲 幼兒票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 200,
+	    TotalAmount: 3,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: false
+	},
+	//525魔戒入圍
+	{ ticketsType: "19歲以上 成人票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 600,
+	    TotalAmount: 5,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "13-18歲 中學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 550,
+	    TotalAmount: 6,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "7-12歲 小學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 440,
+	    TotalAmount: 1,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "4-6歲 幼兒票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 120,
+	    TotalAmount: 17,
+	    UserSelectAmount: 0,
+	    date: 525,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: true
+	},
+
+	//以下為526門票
+	//526哈利波特
+	{ ticketsType: "19歲以上 成人票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 590,
+	    TotalAmount: 10,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "13-18歲 中學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 510,
+	    TotalAmount: 7,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "7-12歲 小學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 310,
+	    TotalAmount: 7,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "4-6歲 幼兒票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 140,
+	    TotalAmount: 4,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "哈利波特入圍",
+	    DiscountedPrice: true
+	},
+	//526星際大戰入圍
+	{ ticketsType: "19歲以上 成人票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 680,
+	    TotalAmount: 5,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "13-18歲 中學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 640,
+	    TotalAmount: 10,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "7-12歲 小學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 580,
+	    TotalAmount: 4,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "4-6歲 幼兒票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 270,
+	    TotalAmount: 1,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "星際大戰入圍",
+	    DiscountedPrice: true
+	},
+	//526魔戒入圍
+	{ ticketsType: "19歲以上 成人票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 620,
+	    TotalAmount: 17,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: true
+	}, { ticketsType: "13-18歲 中學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 440,
+	    TotalAmount: 3,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: false
+	}, { ticketsType: "7-12歲 小學生票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 390,
+	    TotalAmount: 10,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: true
+	}, {
+	    ticketsType: "4-6歲 幼兒票",
+	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	    Price: 150,
+	    TotalAmount: 4,
+	    UserSelectAmount: 0,
+	    date: 526,
+	    situation: "魔戒入圍",
+	    DiscountedPrice: false
+	}];
+	console.log(productItems[0].ticketsType);
+
+	var MainFilter = function (_Component) {
+	    _inherits(MainFilter, _Component);
+
+	    function MainFilter(props) {
+	        _classCallCheck(this, MainFilter);
+
+	        var _this = _possibleConstructorReturn(this, (MainFilter.__proto__ || Object.getPrototypeOf(MainFilter)).call(this, props));
+
+	        _this.onSelectChange = _this.onSelectChange.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(MainFilter, [{
+	        key: 'onSelectChange',
+	        value: function onSelectChange(e) {
+	            var updates = {
+	                date: [],
+	                situation: [],
+	                DiscountedPrice: true,
+	                reciveObject: []
+	            };
+	            e.preventDefault();
+	            var date = e.target.value;
+	            if (date === 524) {
+	                for (var i = 0; i < productItems.length; i++) {
+	                    if (productItems[i].date === 524) {
+
+	                        updates.date.push(productItems[i].date);
+	                        updates.situation.push(productItems[i].situation);
+	                        updates.DiscountedPrice.push(productItems[i].DiscountedPrice);
+	                        updates.reciveObject.push(productItems[i]);
+	                    } else if (productItems[i].date === 525) {
+
+	                        updates.date.push(productItems[i].date);
+	                        updates.situation.push(productItems[i].situation);
+	                        updates.DiscountedPrice.push(productItems[i].DiscountedPrice);
+	                        updates.reciveObject.push(productItems[i]);
+	                    } else if (productItems[i].date === 526) {
+
+	                        updates.date.push(productItems[i].date);
+	                        updates.situation.push(productItems[i].situation);
+	                        updates.DiscountedPrice.push(productItems[i].DiscountedPrice);
+	                    }
+	                }
+	            }
+	            //判斷結束
+	            this.props.onSelect(updates);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'h1',
+	                    null,
+	                    '\u4E09\u9DF9\u4E4B\u68EE-\u5409\u535C\u529B\u7F8E\u8853\u9928\u9001\u5206\u4EAB\u5668\u4E8C\u65E5\u5238'
+	                ),
+	                _react2.default.createElement(
+	                    'select',
+	                    { className: 'date', onChange: this.onSelectChange },
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '524' },
+	                        '\u65E5\u671F 2017-05-24'
+	                    ),
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '525' },
+	                        '\u65E5\u671F 2017-05-25'
+	                    ),
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '526' },
+	                        '\u65E5\u671F 2017-05-26'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'select',
+	                    { className: 'situation' },
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '\u54C8\u5229\u6CE2\u7279\u5165\u570D' },
+	                        '\u54C8\u5229\u6CE2\u7279\u5165\u570D'
+	                    ),
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '\u661F\u969B\u5927\u6230\u5165\u570D' },
+	                        '\u661F\u969B\u5927\u6230\u5165\u570D'
+	                    ),
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '\u9B54\u6212\u5165\u570D' },
+	                        '\u9B54\u6212\u5165\u570D'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'select',
+	                    { className: 'DiscountedPrice' },
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: 'true' },
+	                        '\u6709\u512A\u60E0\u5238'
+	                    ),
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: 'false' },
+	                        '\u7121\u512A\u60E0\u5238'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return MainFilter;
+	}(_react.Component);
+
+	exports.default = MainFilter;
+
+/***/ }),
+/* 491 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(480);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ProductMainRightDisplay = function (_Component) {
+	  _inherits(ProductMainRightDisplay, _Component);
+
+	  function ProductMainRightDisplay(props) {
+	    _classCallCheck(this, ProductMainRightDisplay);
+
+	    return _possibleConstructorReturn(this, (ProductMainRightDisplay.__proto__ || Object.getPrototypeOf(ProductMainRightDisplay)).call(this, props));
+	  }
+
+	  _createClass(ProductMainRightDisplay, [{
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'table',
+	          null,
+	          _react2.default.createElement(
+	            'thead',
+	            null,
+	            _react2.default.createElement(
+	              'tr',
+	              null,
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                '\u7968\u7A2E||'
+	              ),
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                '\u8AAA\u660E||'
+	              ),
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                '\u50F9\u683C||'
+	              ),
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                '\u53EF\u552E\u6578||'
+	              ),
+	              _react2.default.createElement(
+	                'td',
+	                null,
+	                'User\u8CFC\u7269\u6578'
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'nineteenUp' },
+	          this.props.nineteenUp,
+	          _react2.default.createElement('div', null)
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'thirteenUp' },
+	          this.props.thirteenUp,
+	          _react2.default.createElement('div', null)
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'sevenUp' },
+	          this.props.sevenUp,
+	          _react2.default.createElement('div', null)
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'fourUp' },
+	          this.props.fourUp,
+	          _react2.default.createElement('div', null)
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ProductMainRightDisplay;
+	}(_react.Component);
+	// 這應該是最後要印出的<div>{this.props.display}</div>
+
+
+	exports.default = ProductMainRightDisplay;
+
+/***/ }),
+/* 492 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(480);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SelectOption = function (_Component) {
+	    _inherits(SelectOption, _Component);
+
+	    function SelectOption(props) {
+	        _classCallCheck(this, SelectOption);
+
+	        var _this = _possibleConstructorReturn(this, (SelectOption.__proto__ || Object.getPrototypeOf(SelectOption)).call(this, props));
+
+	        _this.state = { selected: 3 };
+	        _this.onSelectChange = _this.onSelectChange.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(SelectOption, [{
+	        key: 'onSelectChange',
+	        value: function onSelectChange(e) {
+
+	            e.preventDefault();
+	            this.setState({
+	                selected: e.target.value
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'select',
+	                { value: this.state.selected, onChange: this.onSelectChange },
+	                _react2.default.createElement(
+	                    'option',
+	                    { value: '1' },
+	                    '1'
+	                ),
+	                _react2.default.createElement(
+	                    'option',
+	                    { value: '2' },
+	                    '2'
+	                ),
+	                _react2.default.createElement(
+	                    'option',
+	                    { value: '3' },
+	                    '3'
+	                ),
+	                _react2.default.createElement(
+	                    'option',
+	                    { value: '4' },
+	                    '4'
+	                ),
+	                _react2.default.createElement(
+	                    'option',
+	                    { value: '5' },
+	                    '5'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return SelectOption;
+	}(_react.Component);
+
+	exports.default = SelectOption;
 
 /***/ })
 /******/ ]);

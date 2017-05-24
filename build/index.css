@@ -2,7 +2,21 @@
   text-align: center;
   padding: 10px;
 }
+.nineteenUp{
+  display:inline;
+ 
+}
+.thirteenUp {
+  display:inline;
+}
 
+.sevenUp{
+  display:inline;
+}
+
+.fourUp{
+  display:inline;
+}
 /* Gallery Styles */
 .book {
   display: inline-block;
