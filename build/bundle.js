@@ -30633,48 +30633,46 @@
 	        var _this = _possibleConstructorReturn(this, (ProductMainRight.__proto__ || Object.getPrototypeOf(ProductMainRight)).call(this, props));
 
 	        _this.state = {
-
-	            date: 24,
-	            situation: "哈利波特入圍",
-	            DiscountedPrice: true,
-	            //要render的
-	            reciveObject: [{
-	                ticketsType: "19歲以上 成人票",
-	                Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	                Price: 560,
-	                TotalAmount: 4,
-	                UserSelectAmount: 0,
-	                date: 524,
-	                situation: "哈利波特入圍",
-	                DiscountedPrice: true
-	            }, {
-	                ticketsType: "13-18歲 中學生票",
-	                Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	                Price: 480,
-	                TotalAmount: 2,
-	                UserSelectAmount: 0,
-	                date: 524,
-	                situation: "哈利波特入圍",
-	                DiscountedPrice: false
-	            }, {
-	                ticketsType: "7-12歲 小學生票",
-	                Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	                Price: 330,
-	                TotalAmount: 2,
-	                UserSelectAmount: 0,
-	                date: 524,
-	                situation: "哈利波特入圍",
-	                DiscountedPrice: true
-	            }, {
-	                ticketsType: "4-6歲 幼兒票",
-	                Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	                Price: 200,
-	                TotalAmount: 1,
-	                UserSelectAmount: 0,
-	                date: 524,
-	                situation: "哈利波特入圍",
-	                DiscountedPrice: false
-	            }]
+	            date: 524,
+	            situation: "哈利波特入圍"
+	            /*DiscountedPrice: true,
+	                       //要render的
+	            reciveObject: [{ticketsType:"19歲以上 成人票",
+	            Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	            Price: 560,
+	            TotalAmount: 4,
+	            UserSelectAmount:0,
+	            date: 524,
+	            situation:"哈利波特入圍",
+	            DiscountedPrice: true
+	            },
+	            {ticketsType:"13-18歲 中學生票",
+	            Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	            Price: 480,
+	            TotalAmount: 2,
+	            UserSelectAmount:0,
+	            date: 524,
+	            situation:"哈利波特入圍",
+	            DiscountedPrice: false
+	            },
+	            {ticketsType:"7-12歲 小學生票",
+	            Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	            Price: 330,
+	            TotalAmount: 2,
+	            UserSelectAmount:0,
+	            date: 524,
+	            situation:"哈利波特入圍",
+	            DiscountedPrice: true
+	            },
+	            {ticketsType:"4-6歲 幼兒票",
+	            Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	            Price: 200,
+	            TotalAmount: 1,
+	            UserSelectAmount:0,
+	            date: 524,
+	            situation:"哈利波特入圍",
+	            DiscountedPrice: false
+	            }]*/
 	        };
 	        _this.handleFilter = _this.handleFilter.bind(_this);
 	        return _this;
@@ -30691,33 +30689,40 @@
 	        key: 'render',
 	        value: function render() {
 	            //測試中
-	            console.log(this.state.situation);
+
 
 	            //試驗轉化object到jsx
-	            var a = this.state.reciveObject;
-
-	            var nineteenUp = [];
-	            var thirteenUp = [];
-	            var sevenUp = [];
-	            var fourUp = [];
-	            for (var i = 0; i < a.length; i++) {
-	                if (a[i].ticketsType === "19歲以上 成人票") {
-
-	                    nineteenUp.push(a[i].ticketsType, "｜", a[i].Price, "｜", a[i].TotalAmount);
-	                } else if (a[i].ticketsType === "13-18歲 中學生票") {
-	                    thirteenUp.push(a[i].ticketsType, "｜", a[i].Price, "｜", a[i].TotalAmount);
-	                } else if (a[i].ticketsType === "7-12歲 小學生票") {
-	                    sevenUp.push(a[i].ticketsType, "｜", a[i].Price, "｜", a[i].TotalAmount);
-	                } else if (a[i].ticketsType === "4-6歲 幼兒票") {
-	                    fourUp.push(a[i].ticketsType, "｜", a[i].Price, "｜", a[i].TotalAmount);
+	            /*let a = this.state.reciveObject;
+	             let nineteenUp=[];
+	            let thirteenUp=[];
+	            let sevenUp=[];
+	            let fourUp=[];
+	            for(let i = 0 ; i < a.length;i++){
+	                if(a[i].ticketsType === "19歲以上 成人票" ){
+	                    
+	                     nineteenUp.push(a[i].ticketsType,"｜",a[i].Price,"｜",a[i].TotalAmount);
+	                }else if(a[i].ticketsType === "13-18歲 中學生票"){
+	                  thirteenUp.push(a[i].ticketsType,"｜",a[i].Price,"｜",a[i].TotalAmount);
+	                }else if(a[i].ticketsType === "7-12歲 小學生票"){
+	                     sevenUp.push(a[i].ticketsType,"｜",a[i].Price,"｜",a[i].TotalAmount);
+	                }else if(a[i].ticketsType === "4-6歲 幼兒票"){
+	                    fourUp.push(a[i].ticketsType,"｜",a[i].Price,"｜",a[i].TotalAmount);
 	                }
-	            }
-
+	            }*/
+	            console.log(this.state.date);
 	            return _react2.default.createElement(
 	                'div',
 	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    this.state.date,
+	                    ' ',
+	                    this.state.situation,
+	                    ' ',
+	                    this.state.DiscountedPrice
+	                ),
 	                _react2.default.createElement(_MainFilter2.default, { onSelect: this.handleFilter }),
-	                _react2.default.createElement(_ProductMainRightDisplay2.default, { nineteenUp: nineteenUp, thirteenUp: thirteenUp, sevenUp: sevenUp, fourUp: fourUp }),
 	                _react2.default.createElement(_SelectTest2.default, null)
 	            );
 	        }
@@ -30726,6 +30731,7 @@
 	    return ProductMainRight;
 	}(_react.Component);
 	//onSelect={this.handleFilter}
+	//<ProductMainRightDisplay nineteenUp={nineteenUp} thirteenUp={thirteenUp} sevenUp={sevenUp} fourUp={fourUp} />
 
 
 	exports.default = ProductMainRight;
@@ -30750,6 +30756,10 @@
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
+	var _ProductMainRightDisplay = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./ProductRight/ProductMainRightDisplay\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _ProductMainRightDisplay2 = _interopRequireDefault(_ProductMainRightDisplay);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30757,321 +30767,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var productItems = [
-	//以下開始為524的門票
-	//524哈利播特
-	{ ticketsType: "19歲以上 成人票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 560,
-	    TotalAmount: 4,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "13-18歲 中學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 480,
-	    TotalAmount: 2,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "7-12歲 小學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 330,
-	    TotalAmount: 2,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "4-6歲 幼兒票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 200,
-	    TotalAmount: 1,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: false
-	},
-	//524星際大戰入圍
-	{ ticketsType: "19歲以上 成人票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 700,
-	    TotalAmount: 1,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "13-18歲 中學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 630,
-	    TotalAmount: 1,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "7-12歲 小學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 550,
-	    TotalAmount: 2,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "4-6歲 幼兒票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 220,
-	    TotalAmount: 2,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: true
-	},
-	//524魔戒入圍
-	{ ticketsType: "19歲以上 成人票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 570,
-	    TotalAmount: 15,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "13-18歲 中學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 450,
-	    TotalAmount: 3,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "7-12歲 小學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 380,
-	    TotalAmount: 10,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "4-6歲 幼兒票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 170,
-	    TotalAmount: 7,
-	    UserSelectAmount: 0,
-	    date: 524,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: false
-	},
-
-	//以下為525門票
-	//525哈利波特
-	{ ticketsType: "19歲以上 成人票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 670,
-	    TotalAmount: 4,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "13-18歲 中學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 500,
-	    TotalAmount: 2,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "7-12歲 小學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 340,
-	    TotalAmount: 4,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "4-6歲 幼兒票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 200,
-	    TotalAmount: 4,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: true
-	},
-	//525星際大戰入圍
-	{ ticketsType: "19歲以上 成人票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 700,
-	    TotalAmount: 10,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "13-18歲 中學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 630,
-	    TotalAmount: 1,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "7-12歲 小學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 470,
-	    TotalAmount: 8,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "4-6歲 幼兒票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 200,
-	    TotalAmount: 3,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: false
-	},
-	//525魔戒入圍
-	{ ticketsType: "19歲以上 成人票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 600,
-	    TotalAmount: 5,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "13-18歲 中學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 550,
-	    TotalAmount: 6,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "7-12歲 小學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 440,
-	    TotalAmount: 1,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "4-6歲 幼兒票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 120,
-	    TotalAmount: 17,
-	    UserSelectAmount: 0,
-	    date: 525,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: true
-	},
-
-	//以下為526門票
-	//526哈利波特
-	{ ticketsType: "19歲以上 成人票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 590,
-	    TotalAmount: 10,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "13-18歲 中學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 510,
-	    TotalAmount: 7,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "7-12歲 小學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 310,
-	    TotalAmount: 7,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "4-6歲 幼兒票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 140,
-	    TotalAmount: 4,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "哈利波特入圍",
-	    DiscountedPrice: true
-	},
-	//526星際大戰入圍
-	{ ticketsType: "19歲以上 成人票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 680,
-	    TotalAmount: 5,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "13-18歲 中學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 640,
-	    TotalAmount: 10,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "7-12歲 小學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 580,
-	    TotalAmount: 4,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "4-6歲 幼兒票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 270,
-	    TotalAmount: 1,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "星際大戰入圍",
-	    DiscountedPrice: true
-	},
-	//526魔戒入圍
-	{ ticketsType: "19歲以上 成人票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 620,
-	    TotalAmount: 17,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: true
-	}, { ticketsType: "13-18歲 中學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 440,
-	    TotalAmount: 3,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: false
-	}, { ticketsType: "7-12歲 小學生票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 390,
-	    TotalAmount: 10,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: true
-	}, {
-	    ticketsType: "4-6歲 幼兒票",
-	    Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
-	    Price: 150,
-	    TotalAmount: 4,
-	    UserSelectAmount: 0,
-	    date: 526,
-	    situation: "魔戒入圍",
-	    DiscountedPrice: false
-	}];
-	console.log(productItems[0].ticketsType);
 
 	var MainFilter = function (_Component) {
 	    _inherits(MainFilter, _Component);
@@ -31081,50 +30776,36 @@
 
 	        var _this = _possibleConstructorReturn(this, (MainFilter.__proto__ || Object.getPrototypeOf(MainFilter)).call(this, props));
 
+	        _this.state = {
+	            date: 524,
+	            situation: "哈利波特入圍",
+	            DiscountedPrice: true
+	        };
 	        _this.onSelectChange = _this.onSelectChange.bind(_this);
+
 	        return _this;
 	    }
 
 	    _createClass(MainFilter, [{
 	        key: 'onSelectChange',
 	        value: function onSelectChange(e) {
-	            var updates = {
-	                date: [],
-	                situation: [],
-	                DiscountedPrice: true,
-	                reciveObject: []
-	            };
+	            var updates = {}; //想回傳回去更新state的東西啦
+
 	            e.preventDefault();
-	            var date = e.target.value;
-	            if (date === 524) {
-	                for (var i = 0; i < productItems.length; i++) {
-	                    if (productItems[i].date === 524) {
-
-	                        updates.date.push(productItems[i].date);
-	                        updates.situation.push(productItems[i].situation);
-	                        updates.DiscountedPrice.push(productItems[i].DiscountedPrice);
-	                        updates.reciveObject.push(productItems[i]);
-	                    } else if (productItems[i].date === 525) {
-
-	                        updates.date.push(productItems[i].date);
-	                        updates.situation.push(productItems[i].situation);
-	                        updates.DiscountedPrice.push(productItems[i].DiscountedPrice);
-	                        updates.reciveObject.push(productItems[i]);
-	                    } else if (productItems[i].date === 526) {
-
-	                        updates.date.push(productItems[i].date);
-	                        updates.situation.push(productItems[i].situation);
-	                        updates.DiscountedPrice.push(productItems[i].DiscountedPrice);
-	                    }
-	                }
-	            }
-	            //判斷結束
+	            this.setState({
+	                date: e.target.value,
+	                situation: e.target.value,
+	                DiscountedPrice: e.target.value
+	            });
+	            updates.date = this.state.date;
+	            updates.situation = this.state.situation;
+	            updates.DiscountedPrice = this.state.DiscountedPrice;
 	            this.props.onSelect(updates);
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
-
+	            console.log(this.state);
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -31135,7 +30816,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    'select',
-	                    { className: 'date', onChange: this.onSelectChange },
+	                    { className: 'date', value: this.state.date, onChange: this.onSelectChange },
 	                    _react2.default.createElement(
 	                        'option',
 	                        { value: '524' },
@@ -31154,7 +30835,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    'select',
-	                    { className: 'situation' },
+	                    { className: 'situation', value: this.state.situation, onChange: this.onSelectChange },
 	                    _react2.default.createElement(
 	                        'option',
 	                        { value: '\u54C8\u5229\u6CE2\u7279\u5165\u570D' },
@@ -31173,18 +30854,19 @@
 	                ),
 	                _react2.default.createElement(
 	                    'select',
-	                    { className: 'DiscountedPrice' },
+	                    { className: 'DiscountedPrice', value: this.state.DiscountedPrice, onChange: this.onSelectChange },
 	                    _react2.default.createElement(
 	                        'option',
-	                        { value: 'true' },
+	                        { value: true },
 	                        '\u6709\u512A\u60E0\u5238'
 	                    ),
 	                    _react2.default.createElement(
 	                        'option',
-	                        { value: 'false' },
+	                        { value: false },
 	                        '\u7121\u512A\u60E0\u5238'
 	                    )
-	                )
+	                ),
+	                _react2.default.createElement(_ProductMainRightDisplay2.default, null)
 	            );
 	        }
 	    }]);
@@ -31221,6 +30903,320 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var productItems = [
+	//以下開始為524的門票
+	//524哈利播特
+	{ ticketsType: "19歲以上 成人票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 560,
+	  TotalAmount: 4,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "13-18歲 中學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 480,
+	  TotalAmount: 2,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "7-12歲 小學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 330,
+	  TotalAmount: 2,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "4-6歲 幼兒票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 200,
+	  TotalAmount: 1,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: false
+	},
+	//524星際大戰入圍
+	{ ticketsType: "19歲以上 成人票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 700,
+	  TotalAmount: 1,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "13-18歲 中學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 630,
+	  TotalAmount: 1,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "7-12歲 小學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 550,
+	  TotalAmount: 2,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "4-6歲 幼兒票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 220,
+	  TotalAmount: 2,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: true
+	},
+	//524魔戒入圍
+	{ ticketsType: "19歲以上 成人票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 570,
+	  TotalAmount: 15,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "13-18歲 中學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 450,
+	  TotalAmount: 3,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "7-12歲 小學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 380,
+	  TotalAmount: 10,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "4-6歲 幼兒票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 170,
+	  TotalAmount: 7,
+	  UserSelectAmount: 0,
+	  date: 524,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: false
+	},
+
+	//以下為525門票
+	//525哈利波特
+	{ ticketsType: "19歲以上 成人票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 670,
+	  TotalAmount: 4,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "13-18歲 中學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 500,
+	  TotalAmount: 2,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "7-12歲 小學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 340,
+	  TotalAmount: 4,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "4-6歲 幼兒票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 200,
+	  TotalAmount: 4,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: true
+	},
+	//525星際大戰入圍
+	{ ticketsType: "19歲以上 成人票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 700,
+	  TotalAmount: 10,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "13-18歲 中學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 630,
+	  TotalAmount: 1,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "7-12歲 小學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 470,
+	  TotalAmount: 8,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "4-6歲 幼兒票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 200,
+	  TotalAmount: 3,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: false
+	},
+	//525魔戒入圍
+	{ ticketsType: "19歲以上 成人票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 600,
+	  TotalAmount: 5,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "13-18歲 中學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 550,
+	  TotalAmount: 6,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "7-12歲 小學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 440,
+	  TotalAmount: 1,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "4-6歲 幼兒票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 120,
+	  TotalAmount: 17,
+	  UserSelectAmount: 0,
+	  date: 525,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: true
+	},
+
+	//以下為526門票
+	//526哈利波特
+	{ ticketsType: "19歲以上 成人票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 590,
+	  TotalAmount: 10,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "13-18歲 中學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 510,
+	  TotalAmount: 7,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "7-12歲 小學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 310,
+	  TotalAmount: 7,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "4-6歲 幼兒票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 140,
+	  TotalAmount: 4,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "哈利波特入圍",
+	  DiscountedPrice: true
+	},
+	//526星際大戰入圍
+	{ ticketsType: "19歲以上 成人票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 680,
+	  TotalAmount: 5,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "13-18歲 中學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 640,
+	  TotalAmount: 10,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "7-12歲 小學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 580,
+	  TotalAmount: 4,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "4-6歲 幼兒票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 270,
+	  TotalAmount: 1,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "星際大戰入圍",
+	  DiscountedPrice: true
+	},
+	//526魔戒入圍
+	{ ticketsType: "19歲以上 成人票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 620,
+	  TotalAmount: 17,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: true
+	}, { ticketsType: "13-18歲 中學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 440,
+	  TotalAmount: 3,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: false
+	}, { ticketsType: "7-12歲 小學生票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 390,
+	  TotalAmount: 10,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: true
+	}, {
+	  ticketsType: "4-6歲 幼兒票",
+	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  Price: 150,
+	  TotalAmount: 4,
+	  UserSelectAmount: 0,
+	  date: 526,
+	  situation: "魔戒入圍",
+	  DiscountedPrice: false
+	}];
 
 	var ProductMainRightDisplay = function (_Component) {
 	  _inherits(ProductMainRightDisplay, _Component);
@@ -31306,6 +31302,42 @@
 	  return ProductMainRightDisplay;
 	}(_react.Component);
 	// 這應該是最後要印出的<div>{this.props.display}</div>
+	/* onSelectChange(e){
+	        let testbb = [];
+	        let updates = {};
+	        e.preventDefault();
+	        let date = e.target.value;
+	        if(date === 524){
+	            for(let i = 0 ; i< productItems.length;i++){
+	                   if(productItems[i].date === 524){
+	                     testbb.push(productItems[i]);
+	                     updates.reciveObject = testbb;
+	                   }
+	                   testbb = [];
+	            }
+	        
+	        }else if(date === 525){
+	               for(let i = 0 ; i< productItems.length;i++){
+	                   if(productItems[i].date === 525){
+	                     testbb.push(productItems[i]);
+	                     updates.reciveObject = testbb;
+	                   }
+	                   testbb = [];
+	            }
+
+	        }else if(date === 526){
+	               for(let i = 0 ; i< productItems.length;i++){
+	                   if(productItems[i].date === 526){
+	                     testbb.push(productItems[i]);
+	                     updates.reciveObject = testbb;
+	                   }
+	                   testbb = [];
+	            }
+
+	        }
+	        //判斷結束
+	        this.props.onSelect(updates);
+	    }*/
 
 
 	exports.default = ProductMainRightDisplay;
