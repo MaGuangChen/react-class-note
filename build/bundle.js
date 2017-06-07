@@ -30246,6 +30246,10 @@
 
 	var _ProductMainRight2 = _interopRequireDefault(_ProductMainRight);
 
+	var _MainShoppingCart = __webpack_require__(492);
+
+	var _MainShoppingCart2 = _interopRequireDefault(_MainShoppingCart);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30273,7 +30277,8 @@
 	                    background: 'https://www.settour.com.tw/ss_img/GFG/0000/0028/67/GFG0000002867_s_300.jpg',
 	                    title: '\u9810\u8A2D\u6A19\u984C\u5594'
 	                }),
-	                _react2.default.createElement(_ProductMainRight2.default, null)
+	                _react2.default.createElement(_ProductMainRight2.default, null),
+	                _react2.default.createElement(_MainShoppingCart2.default, null)
 	            );
 	        }
 	    }]);
@@ -30604,17 +30609,13 @@
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
-	var _MainFilter = __webpack_require__(490);
-
-	var _MainFilter2 = _interopRequireDefault(_MainFilter);
-
-	var _ProductMainRightDisplay = __webpack_require__(491);
+	var _ProductMainRightDisplay = __webpack_require__(490);
 
 	var _ProductMainRightDisplay2 = _interopRequireDefault(_ProductMainRightDisplay);
 
-	var _SelectTest = __webpack_require__(492);
+	var _MainFilter = __webpack_require__(491);
 
-	var _SelectTest2 = _interopRequireDefault(_SelectTest);
+	var _MainFilter2 = _interopRequireDefault(_MainFilter);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30700,7 +30701,7 @@
 	            for(let i = 0 ; i < a.length;i++){
 	                if(a[i].ticketsType === "19歲以上 成人票" ){
 	                    
-	                     nineteenUp.push(a[i].ticketsType,"｜",a[i].Price,"｜",a[i].TotalAmount);
+	                nineteenUp.push(a[i].ticketsType,"｜",a[i].Price,"｜",a[i].TotalAmount);
 	                }else if(a[i].ticketsType === "13-18歲 中學生票"){
 	                  thirteenUp.push(a[i].ticketsType,"｜",a[i].Price,"｜",a[i].TotalAmount);
 	                }else if(a[i].ticketsType === "7-12歲 小學生票"){
@@ -30709,21 +30710,11 @@
 	                    fourUp.push(a[i].ticketsType,"｜",a[i].Price,"｜",a[i].TotalAmount);
 	                }
 	            }*/
-	            console.log(this.state.date);
+
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    null,
-	                    this.state.date,
-	                    ' ',
-	                    this.state.situation,
-	                    ' ',
-	                    this.state.DiscountedPrice
-	                ),
-	                _react2.default.createElement(_MainFilter2.default, { onSelect: this.handleFilter }),
-	                _react2.default.createElement(_SelectTest2.default, null)
+	                _react2.default.createElement(_MainFilter2.default, { onSelect: this.handleFilter })
 	            );
 	        }
 	    }]);
@@ -30738,146 +30729,6 @@
 
 /***/ }),
 /* 490 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(298);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _propTypes = __webpack_require__(480);
-
-	var _propTypes2 = _interopRequireDefault(_propTypes);
-
-	var _ProductMainRightDisplay = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./ProductRight/ProductMainRightDisplay\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-	var _ProductMainRightDisplay2 = _interopRequireDefault(_ProductMainRightDisplay);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var MainFilter = function (_Component) {
-	    _inherits(MainFilter, _Component);
-
-	    function MainFilter(props) {
-	        _classCallCheck(this, MainFilter);
-
-	        var _this = _possibleConstructorReturn(this, (MainFilter.__proto__ || Object.getPrototypeOf(MainFilter)).call(this, props));
-
-	        _this.state = {
-	            date: 524,
-	            situation: "哈利波特入圍",
-	            DiscountedPrice: true
-	        };
-	        _this.onSelectChange = _this.onSelectChange.bind(_this);
-
-	        return _this;
-	    }
-
-	    _createClass(MainFilter, [{
-	        key: 'onSelectChange',
-	        value: function onSelectChange(e) {
-	            var updates = {}; //想回傳回去更新state的東西啦
-
-	            e.preventDefault();
-	            this.setState({
-	                date: e.target.value,
-	                situation: e.target.value,
-	                DiscountedPrice: e.target.value
-	            });
-	            updates.date = this.state.date;
-	            updates.situation = this.state.situation;
-	            updates.DiscountedPrice = this.state.DiscountedPrice;
-	            this.props.onSelect(updates);
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            console.log(this.state);
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'h1',
-	                    null,
-	                    '\u4E09\u9DF9\u4E4B\u68EE-\u5409\u535C\u529B\u7F8E\u8853\u9928\u9001\u5206\u4EAB\u5668\u4E8C\u65E5\u5238'
-	                ),
-	                _react2.default.createElement(
-	                    'select',
-	                    { className: 'date', value: this.state.date, onChange: this.onSelectChange },
-	                    _react2.default.createElement(
-	                        'option',
-	                        { value: '524' },
-	                        '\u65E5\u671F 2017-05-24'
-	                    ),
-	                    _react2.default.createElement(
-	                        'option',
-	                        { value: '525' },
-	                        '\u65E5\u671F 2017-05-25'
-	                    ),
-	                    _react2.default.createElement(
-	                        'option',
-	                        { value: '526' },
-	                        '\u65E5\u671F 2017-05-26'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'select',
-	                    { className: 'situation', value: this.state.situation, onChange: this.onSelectChange },
-	                    _react2.default.createElement(
-	                        'option',
-	                        { value: '\u54C8\u5229\u6CE2\u7279\u5165\u570D' },
-	                        '\u54C8\u5229\u6CE2\u7279\u5165\u570D'
-	                    ),
-	                    _react2.default.createElement(
-	                        'option',
-	                        { value: '\u661F\u969B\u5927\u6230\u5165\u570D' },
-	                        '\u661F\u969B\u5927\u6230\u5165\u570D'
-	                    ),
-	                    _react2.default.createElement(
-	                        'option',
-	                        { value: '\u9B54\u6212\u5165\u570D' },
-	                        '\u9B54\u6212\u5165\u570D'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'select',
-	                    { className: 'DiscountedPrice', value: this.state.DiscountedPrice, onChange: this.onSelectChange },
-	                    _react2.default.createElement(
-	                        'option',
-	                        { value: true },
-	                        '\u6709\u512A\u60E0\u5238'
-	                    ),
-	                    _react2.default.createElement(
-	                        'option',
-	                        { value: false },
-	                        '\u7121\u512A\u60E0\u5238'
-	                    )
-	                ),
-	                _react2.default.createElement(_ProductMainRightDisplay2.default, null)
-	            );
-	        }
-	    }]);
-
-	    return MainFilter;
-	}(_react.Component);
-
-	exports.default = MainFilter;
-
-/***/ }),
-/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30908,7 +30759,7 @@
 	//以下開始為524的門票
 	//524哈利播特
 	{ ticketsType: "19歲以上 成人票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 560,
 	  TotalAmount: 4,
 	  UserSelectAmount: 0,
@@ -30916,7 +30767,7 @@
 	  situation: "哈利波特入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "13-18歲 中學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 480,
 	  TotalAmount: 2,
 	  UserSelectAmount: 0,
@@ -30924,7 +30775,7 @@
 	  situation: "哈利波特入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "7-12歲 小學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 330,
 	  TotalAmount: 2,
 	  UserSelectAmount: 0,
@@ -30932,7 +30783,7 @@
 	  situation: "哈利波特入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "4-6歲 幼兒票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 200,
 	  TotalAmount: 1,
 	  UserSelectAmount: 0,
@@ -30942,7 +30793,7 @@
 	},
 	//524星際大戰入圍
 	{ ticketsType: "19歲以上 成人票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 700,
 	  TotalAmount: 1,
 	  UserSelectAmount: 0,
@@ -30950,7 +30801,7 @@
 	  situation: "星際大戰入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "13-18歲 中學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 630,
 	  TotalAmount: 1,
 	  UserSelectAmount: 0,
@@ -30958,7 +30809,7 @@
 	  situation: "星際大戰入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "7-12歲 小學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 550,
 	  TotalAmount: 2,
 	  UserSelectAmount: 0,
@@ -30966,7 +30817,7 @@
 	  situation: "星際大戰入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "4-6歲 幼兒票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 220,
 	  TotalAmount: 2,
 	  UserSelectAmount: 0,
@@ -30976,7 +30827,7 @@
 	},
 	//524魔戒入圍
 	{ ticketsType: "19歲以上 成人票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 570,
 	  TotalAmount: 15,
 	  UserSelectAmount: 0,
@@ -30984,7 +30835,7 @@
 	  situation: "魔戒入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "13-18歲 中學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 450,
 	  TotalAmount: 3,
 	  UserSelectAmount: 0,
@@ -30992,7 +30843,7 @@
 	  situation: "魔戒入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "7-12歲 小學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 380,
 	  TotalAmount: 10,
 	  UserSelectAmount: 0,
@@ -31000,7 +30851,7 @@
 	  situation: "魔戒入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "4-6歲 幼兒票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 170,
 	  TotalAmount: 7,
 	  UserSelectAmount: 0,
@@ -31012,7 +30863,7 @@
 	//以下為525門票
 	//525哈利波特
 	{ ticketsType: "19歲以上 成人票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 670,
 	  TotalAmount: 4,
 	  UserSelectAmount: 0,
@@ -31020,7 +30871,7 @@
 	  situation: "哈利波特入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "13-18歲 中學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 500,
 	  TotalAmount: 2,
 	  UserSelectAmount: 0,
@@ -31028,7 +30879,7 @@
 	  situation: "哈利波特入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "7-12歲 小學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 340,
 	  TotalAmount: 4,
 	  UserSelectAmount: 0,
@@ -31036,7 +30887,7 @@
 	  situation: "哈利波特入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "4-6歲 幼兒票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 200,
 	  TotalAmount: 4,
 	  UserSelectAmount: 0,
@@ -31046,7 +30897,7 @@
 	},
 	//525星際大戰入圍
 	{ ticketsType: "19歲以上 成人票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 700,
 	  TotalAmount: 10,
 	  UserSelectAmount: 0,
@@ -31054,7 +30905,7 @@
 	  situation: "星際大戰入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "13-18歲 中學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 630,
 	  TotalAmount: 1,
 	  UserSelectAmount: 0,
@@ -31062,7 +30913,7 @@
 	  situation: "星際大戰入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "7-12歲 小學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 470,
 	  TotalAmount: 8,
 	  UserSelectAmount: 0,
@@ -31070,7 +30921,7 @@
 	  situation: "星際大戰入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "4-6歲 幼兒票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 200,
 	  TotalAmount: 3,
 	  UserSelectAmount: 0,
@@ -31080,7 +30931,7 @@
 	},
 	//525魔戒入圍
 	{ ticketsType: "19歲以上 成人票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 600,
 	  TotalAmount: 5,
 	  UserSelectAmount: 0,
@@ -31088,7 +30939,7 @@
 	  situation: "魔戒入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "13-18歲 中學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 550,
 	  TotalAmount: 6,
 	  UserSelectAmount: 0,
@@ -31096,7 +30947,7 @@
 	  situation: "魔戒入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "7-12歲 小學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 440,
 	  TotalAmount: 1,
 	  UserSelectAmount: 0,
@@ -31104,7 +30955,7 @@
 	  situation: "魔戒入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "4-6歲 幼兒票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 120,
 	  TotalAmount: 17,
 	  UserSelectAmount: 0,
@@ -31116,7 +30967,7 @@
 	//以下為526門票
 	//526哈利波特
 	{ ticketsType: "19歲以上 成人票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 590,
 	  TotalAmount: 10,
 	  UserSelectAmount: 0,
@@ -31124,7 +30975,7 @@
 	  situation: "哈利波特入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "13-18歲 中學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 510,
 	  TotalAmount: 7,
 	  UserSelectAmount: 0,
@@ -31132,7 +30983,7 @@
 	  situation: "哈利波特入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "7-12歲 小學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 310,
 	  TotalAmount: 7,
 	  UserSelectAmount: 0,
@@ -31140,7 +30991,7 @@
 	  situation: "哈利波特入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "4-6歲 幼兒票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 140,
 	  TotalAmount: 4,
 	  UserSelectAmount: 0,
@@ -31150,7 +31001,7 @@
 	},
 	//526星際大戰入圍
 	{ ticketsType: "19歲以上 成人票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 680,
 	  TotalAmount: 5,
 	  UserSelectAmount: 0,
@@ -31158,7 +31009,7 @@
 	  situation: "星際大戰入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "13-18歲 中學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 640,
 	  TotalAmount: 10,
 	  UserSelectAmount: 0,
@@ -31166,7 +31017,7 @@
 	  situation: "星際大戰入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "7-12歲 小學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 580,
 	  TotalAmount: 4,
 	  UserSelectAmount: 0,
@@ -31174,7 +31025,7 @@
 	  situation: "星際大戰入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "4-6歲 幼兒票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 270,
 	  TotalAmount: 1,
 	  UserSelectAmount: 0,
@@ -31184,7 +31035,7 @@
 	},
 	//526魔戒入圍
 	{ ticketsType: "19歲以上 成人票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 620,
 	  TotalAmount: 17,
 	  UserSelectAmount: 0,
@@ -31192,7 +31043,7 @@
 	  situation: "魔戒入圍",
 	  DiscountedPrice: true
 	}, { ticketsType: "13-18歲 中學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 440,
 	  TotalAmount: 3,
 	  UserSelectAmount: 0,
@@ -31200,7 +31051,7 @@
 	  situation: "魔戒入圍",
 	  DiscountedPrice: false
 	}, { ticketsType: "7-12歲 小學生票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 390,
 	  TotalAmount: 10,
 	  UserSelectAmount: 0,
@@ -31209,7 +31060,7 @@
 	  DiscountedPrice: true
 	}, {
 	  ticketsType: "4-6歲 幼兒票",
-	  Description: "【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
+	  //Description:"【行程特色】◆五大必遊景點◆環球影城主題公園：24個以電影主題的遊樂設施與景點，其中18個專為新加坡獨家設計打造。 世界最高的雙軌過山車。 世界首部馬達加斯加過山車。馬來西亞樂高樂園LEGOLAND Malaysia：馬來西亞樂高樂園是亞洲第一座樂園，也是世界上第六座樂高樂園。於2012年9月15日在新山開幕。樂高水上公園：2013年10月21日，全新開幕的樂高樂園水上樂園，是在世界上最大及亞洲第一的高樂水上樂園名牌折扣暢貨中心Premium Outlets：東南亞第一個大型Outlets座落於柔佛新山，共分兩層樓旗下第70間購物中心。私房之旅：獨家代理龜硌漁村古米船遊河+傳統水上人家+貝類養殖場體驗在地風情。",
 	  Price: 150,
 	  TotalAmount: 4,
 	  UserSelectAmount: 0,
@@ -31218,6 +31069,14 @@
 	  DiscountedPrice: false
 	}];
 
+	function ProductItem(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    props.children
+	  );
+	}
+
 	var ProductMainRightDisplay = function (_Component) {
 	  _inherits(ProductMainRightDisplay, _Component);
 
@@ -31225,11 +31084,41 @@
 	    _classCallCheck(this, ProductMainRightDisplay);
 
 	    return _possibleConstructorReturn(this, (ProductMainRightDisplay.__proto__ || Object.getPrototypeOf(ProductMainRightDisplay)).call(this, props));
+	    /*this.state ={
+	      date: this.props.date,
+	      situation:this.props.situation,
+	      DiscountedPrice:this.props.DiscountedPrice
+	    };*/
 	  }
 
 	  _createClass(ProductMainRightDisplay, [{
 	    key: 'render',
 	    value: function render() {
+	      var date = this.props.date;
+	      var situation = this.props.situation;
+	      var DiscountedPrice = this.props.DiscountedPrice;
+
+	      var renderPushNineteen = []; //要印的東西
+	      var renderPushThirteen = []; //要印的東西
+	      var renderPushSeven = []; //要印的東西
+	      var renderPushFour = []; //要印的東西
+
+
+	      for (var i = 0; i < productItems.length; i++) {
+
+	        if (date == productItems[i].date && situation == productItems[i].situation && DiscountedPrice == productItems[i].DiscountedPrice && productItems[i].ticketsType == "19歲以上 成人票") {
+
+	          renderPushNineteen.push(productItems[i].ticketsType, "｜", productItems[i].Price, "｜", productItems[i].TotalAmount);
+	        } else if (date == productItems[i].date && situation == productItems[i].situation && DiscountedPrice == productItems[i].DiscountedPrice && productItems[i].ticketsType == "13-18歲 中學生票") {
+	          renderPushThirteen.push(productItems[i].ticketsType, "｜", productItems[i].Price, "｜", productItems[i].TotalAmount);
+	        } else if (date == productItems[i].date && situation == productItems[i].situation && DiscountedPrice == productItems[i].DiscountedPrice && productItems[i].ticketsType == "7-12歲 小學生票") {
+	          renderPushSeven.push(productItems[i].ticketsType, "｜", productItems[i].Price, "｜", productItems[i].TotalAmount);
+	        } else if (date == productItems[i].date && situation == productItems[i].situation && DiscountedPrice == productItems[i].DiscountedPrice && productItems[i].ticketsType == "4-6歲 幼兒票") {
+	          renderPushFour.push(productItems[i].ticketsType, "｜", productItems[i].Price, "｜", productItems[i].TotalAmount);
+	        }
+	      }
+
+	      console.log(DiscountedPrice);
 
 	      return _react2.default.createElement(
 	        'div',
@@ -31273,27 +31162,23 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'nineteenUp' },
-	          this.props.nineteenUp,
-	          _react2.default.createElement('div', null)
+	          null,
+	          renderPushNineteen
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'thirteenUp' },
-	          this.props.thirteenUp,
-	          _react2.default.createElement('div', null)
+	          null,
+	          renderPushThirteen
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'sevenUp' },
-	          this.props.sevenUp,
-	          _react2.default.createElement('div', null)
+	          null,
+	          renderPushSeven
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'fourUp' },
-	          this.props.fourUp,
-	          _react2.default.createElement('div', null)
+	          null,
+	          renderPushFour
 	        )
 	      );
 	    }
@@ -31339,11 +31224,29 @@
 	        this.props.onSelect(updates);
 	    }*/
 
+	/* <div className="nineteenUp">
+	       {this.props.nineteenUp}
+	       <div></div>
+	       </div>
+	       <div className="thirteenUp">
+	        {this.props.thirteenUp}
+	        <div></div>
+	      </div>
+	        <div className="sevenUp">
+	        {this.props.sevenUp}
+	        <div></div>
+	      </div>
+	       <div className="fourUp">
+	        {this.props.fourUp}
+	        <div></div>
+	      </div>
+	*/
+
 
 	exports.default = ProductMainRightDisplay;
 
 /***/ }),
-/* 492 */
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31362,6 +31265,10 @@
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
+	var _ProductMainRightDisplay = __webpack_require__(490);
+
+	var _ProductMainRightDisplay2 = _interopRequireDefault(_ProductMainRightDisplay);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -31370,67 +31277,190 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var SelectOption = function (_Component) {
-	    _inherits(SelectOption, _Component);
+	var MainFilter = function (_Component) {
+	    _inherits(MainFilter, _Component);
 
-	    function SelectOption(props) {
-	        _classCallCheck(this, SelectOption);
+	    function MainFilter(props) {
+	        _classCallCheck(this, MainFilter);
 
-	        var _this = _possibleConstructorReturn(this, (SelectOption.__proto__ || Object.getPrototypeOf(SelectOption)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (MainFilter.__proto__ || Object.getPrototypeOf(MainFilter)).call(this, props));
 
-	        _this.state = { selected: 3 };
-	        _this.onSelectChange = _this.onSelectChange.bind(_this);
+	        _this.state = {
+	            date: 524,
+	            situation: "哈利波特入圍",
+	            DiscountedPrice: true
+	        };
+	        _this.onSelectChangeDate = _this.onSelectChangeDate.bind(_this);
+	        _this.onSelectChangeSituation = _this.onSelectChangeSituation.bind(_this);
+	        _this.onSelectChangeDiscountedPrice = _this.onSelectChangeDiscountedPrice.bind(_this);
+
 	        return _this;
 	    }
 
-	    _createClass(SelectOption, [{
-	        key: 'onSelectChange',
-	        value: function onSelectChange(e) {
+	    _createClass(MainFilter, [{
+	        key: 'onSelectChangeDate',
+	        value: function onSelectChangeDate(e) {
+	            var updates = {}; //想回傳回去更新state的東西啦
+
+
+	            this.setState({ //問題出在每次都改變了三個state了，應該要分開來改變
+	                date: e.target.value
+	            });
+	            updates.date = this.state.date;
+	            this.props.onSelect(updates);
+	        }
+	    }, {
+	        key: 'onSelectChangeSituation',
+	        value: function onSelectChangeSituation(e) {
+	            var updates = {}; //想回傳回去更新state的東西啦
 
 	            e.preventDefault();
-	            this.setState({
-	                selected: e.target.value
+	            this.setState({ //問題出在每次都改變了三個state了，應該要分開來改變
+	                situation: e.target.value
 	            });
+	            updates.situation = this.state.situation;
+	            this.props.onSelect(updates);
+	        }
+	    }, {
+	        key: 'onSelectChangeDiscountedPrice',
+	        value: function onSelectChangeDiscountedPrice(e) {
+	            var updates = {}; //想回傳回去更新state的東西啦
+	            e.preventDefault();
+	            this.setState({ //問題出在每次都改變了三個state了，應該要分開來改變
+	                DiscountedPrice: e.target.value
+	            });
+	            updates.DiscountedPrice = this.state.DiscountedPrice;
+	            this.props.onSelect(updates);
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
+
 	            return _react2.default.createElement(
-	                'select',
-	                { value: this.state.selected, onChange: this.onSelectChange },
+	                'div',
+	                null,
 	                _react2.default.createElement(
-	                    'option',
-	                    { value: '1' },
-	                    '1'
+	                    'h1',
+	                    null,
+	                    '\u4E09\u9DF9\u4E4B\u68EE-\u5409\u535C\u529B\u7F8E\u8853\u9928\u9001\u5206\u4EAB\u5668\u4E8C\u65E5\u5238'
 	                ),
 	                _react2.default.createElement(
-	                    'option',
-	                    { value: '2' },
-	                    '2'
+	                    'select',
+	                    { className: 'date', value: this.state.date, onChange: this.onSelectChangeDate },
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '524' },
+	                        '\u65E5\u671F 2017-05-24'
+	                    ),
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '525' },
+	                        '\u65E5\u671F 2017-05-25'
+	                    ),
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '526' },
+	                        '\u65E5\u671F 2017-05-26'
+	                    )
 	                ),
 	                _react2.default.createElement(
-	                    'option',
-	                    { value: '3' },
-	                    '3'
+	                    'select',
+	                    { className: 'situation', value: this.state.situation, onChange: this.onSelectChangeSituation },
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '\u54C8\u5229\u6CE2\u7279\u5165\u570D' },
+	                        '\u54C8\u5229\u6CE2\u7279\u5165\u570D'
+	                    ),
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '\u661F\u969B\u5927\u6230\u5165\u570D' },
+	                        '\u661F\u969B\u5927\u6230\u5165\u570D'
+	                    ),
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: '\u9B54\u6212\u5165\u570D' },
+	                        '\u9B54\u6212\u5165\u570D'
+	                    )
 	                ),
 	                _react2.default.createElement(
-	                    'option',
-	                    { value: '4' },
-	                    '4'
+	                    'select',
+	                    { className: 'DiscountedPrice', value: this.state.DiscountedPrice, onChange: this.onSelectChangeDiscountedPrice },
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: true },
+	                        '\u6709\u512A\u60E0\u5238'
+	                    ),
+	                    _react2.default.createElement(
+	                        'option',
+	                        { value: false },
+	                        '\u7121\u512A\u60E0\u5238'
+	                    )
 	                ),
-	                _react2.default.createElement(
-	                    'option',
-	                    { value: '5' },
-	                    '5'
-	                )
+	                _react2.default.createElement(_ProductMainRightDisplay2.default, { date: this.state.date, situation: this.state.situation, DiscountedPrice: this.state.DiscountedPrice })
 	            );
 	        }
 	    }]);
 
-	    return SelectOption;
+	    return MainFilter;
 	}(_react.Component);
 
-	exports.default = SelectOption;
+	exports.default = MainFilter;
+
+/***/ }),
+/* 492 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ShoppingCartForm = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./ShoppingCartForm\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _ShoppingCartForm2 = _interopRequireDefault(_ShoppingCartForm);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var MainShoppingCart = function (_Component) {
+	    _inherits(MainShoppingCart, _Component);
+
+	    function MainShoppingCart(props) {
+	        _classCallCheck(this, MainShoppingCart);
+
+	        return _possibleConstructorReturn(this, (MainShoppingCart.__proto__ || Object.getPrototypeOf(MainShoppingCart)).call(this, props));
+	    }
+
+	    _createClass(MainShoppingCart, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_ShoppingCartForm2.default, null)
+	            );
+	        }
+
+	        //這個component結束囉    
+
+	    }]);
+
+	    return MainShoppingCart;
+	}(_react.Component);
+
+	exports.default = MainShoppingCart;
 
 /***/ })
 /******/ ]);

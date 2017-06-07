@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 
 import ProductMainLeft from './ProductLeft/ProductMainLeft';
 import ProductMainRight from './ProductRight/ProductMainRight'
+import MainShoppingCart from './ShoppingCart/MainShoppingCart'
 export default class MainProduct extends Component {
     constructor(props){
         super(props);
@@ -17,7 +18,7 @@ export default class MainProduct extends Component {
             title="預設標題喔"
             />
             <ProductMainRight/>
-
+            <MainShoppingCart/>
            </div>
         );
     }
