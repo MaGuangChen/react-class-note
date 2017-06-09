@@ -31422,9 +31422,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ShoppingCartForm = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./ShoppingCartForm\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _ShoppingCartAddForm = __webpack_require__(493);
 
-	var _ShoppingCartForm2 = _interopRequireDefault(_ShoppingCartForm);
+	var _ShoppingCartAddForm2 = _interopRequireDefault(_ShoppingCartAddForm);
+
+	var _ListRender = __webpack_require__(494);
+
+	var _ListRender2 = _interopRequireDefault(_ListRender);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31440,16 +31444,135 @@
 	    function MainShoppingCart(props) {
 	        _classCallCheck(this, MainShoppingCart);
 
-	        return _possibleConstructorReturn(this, (MainShoppingCart.__proto__ || Object.getPrototypeOf(MainShoppingCart)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (MainShoppingCart.__proto__ || Object.getPrototypeOf(MainShoppingCart)).call(this, props));
+
+	        _this.state = {
+	            productListRender: [],
+	            //將要傳遞至ShoppingCartRender component並顯示在下方
+	            productList: [{
+	                id: 0,
+	                ticketsType: "7-12歲 小學生票",
+	                detail: "2017-02-23(四)",
+	                price: 2320,
+	                totalAmount: 4
+	            }],
+	            //確認後本次要結帳的項目
+	            checkList: {
+	                id: 1,
+	                ticketsType: "7-12歲 小學生票",
+	                detail: "2017-02-23(四)",
+	                price: 2320,
+	                totalAmount: 4
+	            }
+	        };
+	        _this.handleDeleteProductList = _this.handleDeleteProductList.bind(_this);
+	        _this.handleUpdateCheckList = _this.handleUpdateCheckList.bind(_this);
+	        _this.handleAddProductList = _this.handleAddProductList.bind(_this);
+	        //-----constructor end----
+	        return _this;
 	    }
+	    //會在每次component的state或props被更新時自動呼叫
+
 
 	    _createClass(MainShoppingCart, [{
-	        key: 'render',
-	        value: function render() {
+	        key: 'componentDidUpdate',
+	        value: function componentDidUpdate(prevProps, prevState) {
+	            //state被改變時
+	            if (this.state.productList !== prevState.productList) {}
+
+	            //-----componentDidUpdate結束啦
+	        }
+	        //利用.map()方法將包含新增的商品全部返回至ListRender component
+
+	    }, {
+	        key: 'handleRender',
+	        value: function handleRender() {
+	            var _this2 = this;
+
+	            var productList = this.state.productList;
+	            //let idMaker = math.floor();
+
+	            //循環productList的陣列並返回相同長度的ListRender component
+	            var showScreen = this.state.productList.map(function (productList) {
+	                return _react2.default.createElement(_ListRender2.default, {
+	                    key: productList.id,
+	                    id: productList.id + 1,
+	                    ticketsType: productList.ticketsType,
+	                    detail: productList.detail,
+	                    price: productList.price,
+	                    totalAmount: productList.totalAmount,
+	                    handleDeleteProductList: _this2.handleDeleteProductList
+	                });
+	            });
+
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(_ShoppingCartForm2.default, null)
+	                showScreen
+	            );
+	        }
+
+	        //新增購物車清單商品，須透過componentDidUpdate來真正新增至ListRender component
+
+	    }, {
+	        key: 'handleAddProductList',
+	        value: function handleAddProductList(ticketsType, detail, price, totalAmount) {
+
+	            //產生新的商品到state.productList陣列中
+	            var newProduct = {
+	                id: this.state.productList.length,
+	                ticketsType: ticketsType,
+	                detail: detail,
+	                price: price,
+	                totalAmount: totalAmount
+	            };
+	            console.log(this.state.productList.length);
+	            this.setState({
+	                productList: this.state.productList.concat(newProduct)
+	            });
+	            console.log(this.state.productList.length);
+	            console.log(this.state.productList);
+	            //--------handleAddProductList結束啦
+	        }
+
+	        //對應商品id刪除購物車清單商品
+
+	    }, {
+	        key: 'handleDeleteProductList',
+	        value: function handleDeleteProductList(id) {
+	            console.log('this is delete id number ' + id);
+	            this.setState({
+	                productList: this.state.productList.splice(id, 1)
+	            });
+	        }
+
+	        //提交本次結帳清單
+
+	    }, {
+	        key: 'handleUpdateCheckList',
+	        value: function handleUpdateCheckList() {}
+	    }, {
+	        key: 'render',
+	        value: function render() {
+
+	            //在這邊加入.filter，將傳進來的資料處理完並顯示出來
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_ShoppingCartAddForm2.default, {
+	                    handleAddProductList: this.handleAddProductList }),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    '\u8CFC\u7269\u8ECA\u6E05\u55AE'
+	                ),
+	                '\u9078\u64C7||ID||\u7968\u7A2E||\u8AAA\u660E||\u50F9\u683C||\u53EF\u552E\u6578||',
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    this.handleRender()
+	                )
 	            );
 	        }
 
@@ -31461,6 +31584,267 @@
 	}(_react.Component);
 
 	exports.default = MainShoppingCart;
+
+/***/ }),
+/* 493 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var shoppingCartList = [{
+	    id: 0,
+	    ticketsType: "7-12歲 小學生票",
+	    detail: "2017-02-23(四)",
+	    price: 2320,
+	    totalAmount: 4 }, {
+	    id: 1,
+	    ticketsType: "19歲以上 成人票",
+	    detail: "2017-02-22(三)",
+	    price: 2820,
+	    totalAmount: 2 }, {
+	    id: 2,
+	    ticketsType: "13-18歲 中學生票",
+	    detail: "2017-02-23(五)",
+	    price: 2420,
+	    totalAmount: 5 }];
+
+	var ShoppingCartAddForm = function (_Component) {
+	    _inherits(ShoppingCartAddForm, _Component);
+
+	    function ShoppingCartAddForm(props) {
+	        _classCallCheck(this, ShoppingCartAddForm);
+
+	        var _this = _possibleConstructorReturn(this, (ShoppingCartAddForm.__proto__ || Object.getPrototypeOf(ShoppingCartAddForm)).call(this, props));
+
+	        _this.AddNewProductList = _this.AddNewProductList.bind(_this);
+	        return _this;
+	    }
+	    //讓user輸入轉為此component的state
+
+	    //傳props進method
+
+
+	    _createClass(ShoppingCartAddForm, [{
+	        key: "AddNewProductList",
+	        value: function AddNewProductList(e) {
+	            e.preventDefault();
+	            var ticketsType = this.refs.ticketsType.value;
+	            var detail = this.refs.detail.value;
+	            var price = this.refs.price.value;
+	            var totalAmount = this.refs.totalAmount.value;
+
+	            this.props.handleAddProductList(ticketsType, detail, price, totalAmount);
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(
+	                    "form",
+	                    { onSubmit: this.AddNewProductList },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "add-new-product" },
+	                        _react2.default.createElement("input", { type: "text", ref: "ticketsType", placeholder: "\u8F38\u5165\u7968\u5238\u7A2E\u985E" }),
+	                        _react2.default.createElement("input", { type: "text", ref: "detail", placeholder: "\u8F38\u5165\u5546\u54C1\u63CF\u8FF0" }),
+	                        _react2.default.createElement("input", { type: "text", ref: "price", placeholder: "\u8F38\u5165\u5546\u54C1\u50F9\u683C" }),
+	                        _react2.default.createElement("input", { type: "text", ref: "totalAmount", placeholder: "\u8F38\u5165\u5546\u54C1\u6578\u91CF" }),
+	                        _react2.default.createElement(
+	                            "button",
+	                            {
+	                                style: {
+	                                    backgroundColor: '#1e90ff',
+	                                    border: '1px solid #555555',
+	                                    color: 'white',
+	                                    padding: '8px 19px',
+	                                    textAlign: 'center',
+	                                    textDecoration: 'none',
+	                                    display: 'inline-block',
+	                                    fontSize: '12px',
+	                                    margin: '4px 2px',
+	                                    cursor: 'pointer',
+	                                    borderRadius: '12px'
+	                                }
+	                            },
+	                            "\u65B0\u589E\u5546\u54C1"
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return ShoppingCartAddForm;
+	}(_react.Component);
+
+	exports.default = ShoppingCartAddForm;
+
+/***/ }),
+/* 494 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ListRender = function (_Component) {
+	    _inherits(ListRender, _Component);
+
+	    function ListRender(props) {
+	        _classCallCheck(this, ListRender);
+
+	        var _this = _possibleConstructorReturn(this, (ListRender.__proto__ || Object.getPrototypeOf(ListRender)).call(this, props));
+
+	        _this.state = {
+	            listStatus: "uncheck"
+	        };
+	        _this.handleDeleteProductList = _this.handleDeleteProductList.bind(_this);
+	        _this.handleListStatus = _this.handleListStatus.bind(_this);
+	        //------constructor()結束啦
+	        return _this;
+	    }
+
+	    //讓chekbox改變狀態，以便刪除修改或是加入購物車
+
+
+	    _createClass(ListRender, [{
+	        key: "handleListStatus",
+	        value: function handleListStatus() {
+	            if (this.state.listStatus !== "check") {
+	                this.setState({
+	                    listStatus: "check"
+	                });
+	            } else {
+	                this.setState({
+	                    listStatus: "uncheck"
+	                });
+	            }
+
+	            //------handleListStatus()結束啦
+	        }
+	        //透過checkbox狀態刪除該id商品
+
+	    }, {
+	        key: "handleDeleteProductList",
+	        value: function handleDeleteProductList() {
+	            var id = this.props.id;
+	            if (this.state.listStatus === "check") {
+	                this.props.handleDeleteProductList(id);
+	            }
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(
+	                    "ul",
+	                    { className: "product-list-render" },
+	                    _react2.default.createElement(
+	                        "li",
+	                        null,
+	                        _react2.default.createElement("input", { onChange: this.handleListStatus, type: "checkbox" })
+	                    ),
+	                    _react2.default.createElement(
+	                        "li",
+	                        null,
+	                        this.props.id
+	                    ),
+	                    _react2.default.createElement(
+	                        "li",
+	                        null,
+	                        this.props.ticketsType
+	                    ),
+	                    _react2.default.createElement(
+	                        "li",
+	                        null,
+	                        this.props.detail
+	                    ),
+	                    _react2.default.createElement(
+	                        "li",
+	                        null,
+	                        this.props.price
+	                    ),
+	                    _react2.default.createElement(
+	                        "li",
+	                        null,
+	                        this.props.totalAmount
+	                    ),
+	                    _react2.default.createElement(
+	                        "li",
+	                        null,
+	                        _react2.default.createElement(
+	                            "button",
+	                            { onClick: this.handleDeleteProductList },
+	                            "\u522A\u9664\u6309\u9215"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "li",
+	                        null,
+	                        _react2.default.createElement(
+	                            "button",
+	                            null,
+	                            "\u4FEE\u6539\u6309\u9215"
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "li",
+	                        null,
+	                        _react2.default.createElement(
+	                            "button",
+	                            null,
+	                            "\u6DFB\u52A0\u81F3\u7D50\u5E33\u6E05\u55AE"
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return ListRender;
+	}(_react.Component);
+
+	exports.default = ListRender;
 
 /***/ })
 /******/ ]);
